@@ -1,7 +1,7 @@
-Android-Bazzar-RateThisApp
+Android-Bazaar-RateThisApp
 ===================
 
-Android-Bazzar-RateThisApp is a library to show "Rate this app" dialog, based on [Android-RateThisApp](https://github.com/kskkbys/Android-RateThisApp) by Keisuke Kobayashi.
+Android-Bazaar-RateThisApp is a library to show "Rate this app" dialog, based on [Android-RateThisApp](https://github.com/kskkbys/Android-RateThisApp) by Keisuke Kobayashi.
 
 ![Screen shot](https://raw.githubusercontent.com/thesoulless/Android-Bazaar-RateThisApp/master/screenshot_resized.png)
 
@@ -10,7 +10,7 @@ The library monitors the following status
 * How many times is the app launched
 * How long days does it take from the app installation
 
-and show a dialog to engage users to rate the app in [CafeBazzar](http://getbazaar.com) or Google Play.
+and show a dialog to engage users to rate the app in [CafeBazaar](http://getbazaar.com) or Google Play.
 
 ## How to use
 
