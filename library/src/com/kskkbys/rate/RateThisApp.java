@@ -46,6 +46,8 @@ public class RateThisApp {
 	private static Date mInstallDate = new Date();
 	private static int mLaunchTimes = 0;
 	private static boolean mOptOut = false;
+
+    private static boolean bazaar = true;
 	
 	/**
 	 * Days after installation until showing rate dialog
@@ -60,7 +62,10 @@ public class RateThisApp {
 	 * If true, print LogCat
 	 */
 	public static final boolean DEBUG = false;
-	
+
+    public static final int GOOGLE = 0;
+    public static final int BAZAAR = 1;
+
 	/**
 	 * Call this API when the launcher activity is launched.<br>
 	 * It is better to call this API in onStart() of the launcher activity.
@@ -127,8 +132,14 @@ public class RateThisApp {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				String appPackage = context.getPackageName();
-				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackage));
-				context.startActivity(intent);
+
+                if (isBazaar()) {
+                    Intent intent = new Intent(Intent.ACTION_EDIT, Uri.parse("http://cafebazaar.ir/app/?id=" + appPackage));
+                    context.startActivity(intent);
+                } else {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackage));
+                    context.startActivity(intent);
+                }
 				setOptOut(context, true);
 			}
 		});
@@ -177,6 +188,15 @@ public class RateThisApp {
 		editor.putBoolean(KEY_OPT_OUT, optOut);
 		editor.commit();
 	}
+
+    public static boolean isBazaar() {
+        return bazaar;
+    }
+
+    @SuppressWarnings("unused")
+    public static void setBazaar(boolean isBazaar) {
+        RateThisApp.bazaar = isBazaar;
+    }
 	
 	/**
 	 * Print values in SharedPreferences (used for debug)
