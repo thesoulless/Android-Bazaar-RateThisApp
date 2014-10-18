@@ -17,9 +17,15 @@ package com.kskkbys.rtasample;
 
 import com.kskkbys.rate.RateThisApp;
 
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.DisplayMetrics;
 import android.view.Menu;
+
+import java.util.Locale;
 
 /**
  * Sample application of RateThisApp
@@ -28,7 +34,14 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+        Locale myLocale = new Locale("fa-IR");
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+
+        super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	}
 

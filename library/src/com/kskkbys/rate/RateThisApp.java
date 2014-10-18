@@ -111,11 +111,8 @@ public class RateThisApp {
 				return true;
 			}
 			long threshold = INSTALL_DAYS * 24 * 60 * 60 * 1000L;	// msec
-			if (new Date().getTime() - mInstallDate.getTime() >= threshold) {
-				return true;
-			}
-			return false;
-		}
+            return new Date().getTime() - mInstallDate.getTime() >= threshold;
+        }
 	}
 	
 	/**
