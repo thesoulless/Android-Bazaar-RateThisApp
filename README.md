@@ -1,9 +1,9 @@
 Android-Bazzar-RateThisApp
 ===================
 
-Android-Bazzar-RateThisApp is an library to show "Rate this app" dialog, based on [Android-RateThisApp](https://github.com/kskkbys/Android-RateThisApp) by Keisuke Kobayashi.
+Android-Bazzar-RateThisApp is a library to show "Rate this app" dialog, based on [Android-RateThisApp](https://github.com/kskkbys/Android-RateThisApp) by Keisuke Kobayashi.
 
-![Screen shot](https://raw.github.com/thesoulless/Android-RateThisApp/master/screenshot_resized.png)
+![Screen shot](https://raw.githubusercontent.com/thesoulless/Android-Bazaar-RateThisApp/master/screenshot_resized.png)
 
 The library monitors the following status
 
